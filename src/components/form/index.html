@@ -1,0 +1,15 @@
+<form class="form order-section__form" name="form" action="">
+  <label class="form__label">
+    <span class="form__text">Name</span>
+    <input class="form__input email--js" type="text" name="name" placeholder="John Doe" title="Enter your full name">
+  </label>
+  <label class="form__label">
+    <span class="form__text">Phone</span>
+    <input class="form__input password--js" type="text" name="phone" placeholder="+76665553322" title="Enter your phone number">
+  </label>
+  @@include('button/index.html', {
+    'class': 'form__button',
+    'type': 'submit',
+    'text': 'Order Now',
+  })
+</form>

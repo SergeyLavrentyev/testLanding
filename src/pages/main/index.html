@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"/>
+    <link href="/common.css" rel="stylesheet" />
+    <link href="style.css" rel="stylesheet" />
+    <link rel="stylesheet" href="/static/fonts/Gilroy.css" />
+    <link rel="shortcut icon" href="/static/images/favicon.ico">
+    <title>Potencialex</title>
+  </head>
+  <body>
+    <section class="video">
+      <div class="video__wrapper container">
+        <h1 class="video__title">Potencialex</h1>
+        <div id="player"></div>
+        <div class="video__container">
+          <video src="./static/images/couple.mp4" autoplay muted loop class="video__video"></video>
+        </div>
+        <p class="video__text">Become a hero for your partner</p>
+        <a href="#form" class="video__button button">Order Now</a>
+      </div>
+    </section>
+    <section class="slider-section">
+      <div class="container">
+        <h2 class="hidden">Slider</h2>
+        @@include('slider/index.html')
+      </div>
+    </section>
+    <section class="product-features container">
+      <h2 class="product-features__title">Product features</h2>
+      <div class="product-features__wrapper">
+        @@loop('feature/index.html', 'features.json')
+      </div>
+    </section>
+    <section id="form" class="order-section container">
+      <h2 class="order-section__title">Order Now</h2>
+      <div class="order-section__content">
+        <div class="order-section__img-wrapper">
+          <img class="order-section__image" src="./static/images/images.png" alt="product">
+        </div>
+        <span class="order-section__price">99$</span>
+        <span class="order-section__best-price">39$</span>
+      </div>
+      @@include('form/index.html')
+      @@include('countdown-timer/index.html')
+    </section>
+  </body>
+  <script src="scripts.js"></script>
+</html>

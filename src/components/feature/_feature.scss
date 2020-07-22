@@ -1,0 +1,19 @@
+.feature {
+  max-width: 380px;
+  width: 100%;
+  margin-bottom: 15px;
+  padding: 0 10px;
+
+  border-radius: 15px;
+
+  &__container {
+    height: 100%;
+    padding: 20px 35px;
+    background-color: $white;
+  }
+
+  &__img {
+    width: 100%;
+    max-width: 60px;
+  }
+}

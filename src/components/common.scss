@@ -1,0 +1,62 @@
+@import "./variables";
+
+body {
+  margin: 0;
+  font-family: $main-font;
+  color: $black;
+  background-color: $light-blue;
+  overflow-x: hidden;
+}
+
+.container {
+  width: 100%;
+  max-width: 1220px;
+  padding: 0 20px;
+  margin: 0 auto;
+}
+
+a { 
+  text-decoration: none;
+  color: #1E0606;
+}
+
+ul {
+  padding-left: 0;
+}
+
+li {
+  list-style-type: none;
+}
+
+html { 
+  box-sizing: border-box; 
+  scroll-behavior: smooth;
+}
+
+*, 
+*::before, 
+*::after { 
+  box-sizing: inherit; 
+}
+
+img { 
+  max-width: 100%; 
+}
+
+.hidden {
+  position: absolute !important;
+  clip: rect(1px 1px 1px 1px); /* IE6, IE7 */
+  clip: rect(1px, 1px, 1px, 1px);
+  padding:0 !important;
+  border:0 !important;
+  height: 1px !important; 
+  width: 1px !important; 
+  overflow: hidden;
+}
+
+// Подключение компонентов
+@import "./slider/slider";
+@import "./countdown-timer/countdown-timer";
+@import "./button/button";
+@import "./form/form";
+@import "./feature/feature"

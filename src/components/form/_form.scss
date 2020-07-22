@@ -1,0 +1,90 @@
+.form {
+  width: 100%;
+  max-width: 600px;
+  background-color: $white;
+  
+  padding: 60px 40px;
+  border-radius: 25px;
+
+  &__label {
+    display: flex;
+    flex-wrap: wrap;
+
+    & > span {
+      font-size: 20px;
+      margin-bottom: 10px;
+    }
+  }
+
+  &__input {
+    flex: 0 1 100%;
+
+    padding-left: 10px;
+
+    height: 50px;
+    width: 100%;
+    margin-bottom: 20px;
+    border: 0 solid transparent;
+    box-shadow: 0 0 0 2px $mercury;
+    outline: none;
+    cursor: pointer;
+  
+    &:hover {
+      box-shadow: 0 0 0 2px $gray;
+    }
+  
+    &:focus {
+      box-shadow: 0 0 0 2px $black;
+    }
+
+    &::placeholder {
+      color: $gray;
+    }
+  }
+
+  &__text {
+    margin-bottom: 6px;
+  }
+
+  &__button {
+    color: $white;
+    background-color: $pomegranade;
+
+    margin-top: 10px;
+
+    &:hover {
+      background-color: $blue;
+    }
+  }
+}
+
+.input--invalid {
+  box-shadow: 0 0 0 2px $pomegranade; 
+
+  &:focus,
+  &:hover {
+    box-shadow: 0 0 0 2px $pomegranade;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .form {    
+    padding: 30px 20px;
+    border-radius: 15px;
+  
+    &__label > span {
+      font-size: 12px;
+      margin-bottom: 6px;
+    }
+
+    &__input {
+      height: 25px;
+      margin-bottom: 10px;
+      padding-left: 6px;
+
+      &::placeholder {
+        font-size: 12px;
+      }
+    }
+  }
+}
